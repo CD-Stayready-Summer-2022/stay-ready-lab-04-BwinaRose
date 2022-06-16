@@ -1,5 +1,7 @@
 package com.codedifferently;
 
+import java.io.OutputStream;
+
 public class WuBuzz {
     /**
      * Write a short program that prints each number from 1 to n on a new line.
@@ -28,6 +30,20 @@ public class WuBuzz {
      */
 
     public String wuTangClan(int n){
-        return null;
+        String output = "";
+        for (int i = 1; i<=n;i++){
+            if (i % (5*3) == 0) {
+                output += "WuTang Forever\n";
+            }
+            else if (i % 5 == 0){
+                output += "Tang\n";
+            }
+            else if (i % 3 == 0){
+                output += "Wu\n";
+            } else {
+                output += i + "\n";
+            }
+        }
+        return output;
     }
 }
